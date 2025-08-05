@@ -19,56 +19,32 @@ export default function HomePage() {
   }, [])
 
   return (
-    <>
-      <style>{`
-        .user-list {
-          max-width: 600px;
-          margin: 2rem auto;
-          font-family: Arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        .user-list th, .user-list td {
-          border: 1px solid #ddd;
-          padding: 12px 15px;
-          text-align: left;
-        }
-        .user-list th {
-          background-color: #4CAF50;
-          color: white;
-        }
-        .user-list tr:nth-child(even) {
-          background-color: #f9f9f9;
-        }
-        .user-list tr:hover {
-          background-color: #f1f1f1;
-        }
-        h1 {
-          text-align: center;
-          color: #333;
-          margin-top: 2rem;
-          font-size: 2rem;
-        }
-      `}</style>
-      <h1>รายชื่อผู้ใช้</h1>
-      <table className="user-list">
-        <thead>
+    <main style={{ maxWidth: 800, margin: '3rem auto', padding: '1rem', fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>รายชื่อผู้ใช้</h1>
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <thead style={{ backgroundColor: '#4caf50', color: 'white' }}>
           <tr>
-            <th>ลำดับ</th>
-            <th>ชื่อ</th>
-            <th>อีเมล</th>
+            <th style={{ padding: '12px' }}>ลำดับ</th>
+            <th style={{ padding: '12px' }}>ชื่อ</th>
+            <th style={{ padding: '12px' }}>อีเมล</th>
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => (
-            <tr key={user.id}>
-              <td>{index + 1}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
+          {users.length === 0 ? (
+            <tr>
+              <td colSpan={3} style={{ padding: '20px', textAlign: 'center' }}>กำลังโหลดข้อมูล...</td>
             </tr>
-          ))}
+          ) : (
+            users.map((user, index) => (
+              <tr key={user.id} style={{ borderBottom: '1px solid #ddd' }}>
+                <td style={{ padding: '12px' }}>{index + 1}</td>
+                <td style={{ padding: '12px' }}>{user.name}</td>
+                <td style={{ padding: '12px' }}>{user.email}</td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
-    </>
+    </main>
   )
 }
