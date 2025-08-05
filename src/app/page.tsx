@@ -1,3 +1,10 @@
 import Image from "next/image";
 
-<p>asdsadssddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+
+export default function Page() {
+  return (
+    <div>
+      Hello, Next.js!
+    </div>
+  );
+}
