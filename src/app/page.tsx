@@ -19,8 +19,8 @@ export default function HomePage() {
   }, [])
 
   return (
-    <main style={{ maxWidth: 800, margin: '3rem auto', padding: '1rem', fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>รายชื่อผู้ใช้</h1>
+    <main style={{ maxWidth: 800, margin: '3rem auto', padding: '1rem' }}>
+      <h1 style={{ textAlign: 'center' }}>รายชื่อผู้ใช้</h1>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead style={{ backgroundColor: '#4caf50', color: 'white' }}>
           <tr>
@@ -32,7 +32,7 @@ export default function HomePage() {
         <tbody>
           {users.length === 0 ? (
             <tr>
-              <td colSpan={3} style={{ padding: '20px', textAlign: 'center' }}>กำลังโหลดข้อมูล...</td>
+              <td colSpan={3} style={{ textAlign: 'center', padding: '20px' }}>กำลังโหลดข้อมูล...</td>
             </tr>
           ) : (
             users.map((user, index) => (
