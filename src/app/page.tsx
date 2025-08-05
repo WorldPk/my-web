@@ -1,10 +1,10 @@
-import Image from "next/image";
-
+// src/app/page.tsx
+import React from 'react';
 
 export default function Page() {
   return (
-    <div>
-      Hello, Next.js!
-    </div>
+    <main>
+      <h1>Hello Next.jsหฟกหฟกหฟกหฟกหฟกหฟกหฟกหฟหฟกหฟกหฟกฟหก</h1>
+    </main>
   );
 }
