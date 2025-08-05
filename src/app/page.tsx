@@ -4,7 +4,8 @@ import React from 'react';
 export default function Page() {
   return (
     <main>
-      <h1>Hello Next.jsหฟกหฟกหฟกหฟกหฟกหฟกหฟกหฟหฟกหฟกหฟกฟหก</h1>
+      <h1>ทดสอบ หฟกหฟกหฟกหฟกหฟกหฟกหฟกหฟหฟกหฟกหฟกฟหก</h1>
+      <h3>sadasdasdas</h3>
     </main>
   );
 }
